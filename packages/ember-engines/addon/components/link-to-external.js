@@ -1,4 +1,4 @@
-import LinkComponent from '@ember/routing/link-component';
+import { LinkComponent } from '@ember/legacy-built-in-components';
 import { getOwner } from '@ember/application';
 import { set, get } from '@ember/object';
 import { macroCondition, dependencySatisfies } from '@embroider/macros';
