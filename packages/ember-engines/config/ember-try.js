@@ -48,6 +48,11 @@ module.exports = async function() {
       },
       {
         name: "ember-release",
+        env: {
+          EMBER_OPTIONAL_FEATURES: JSON.stringify({
+            "jquery-integration": false
+          })
+        },
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("release"),
@@ -59,6 +64,11 @@ module.exports = async function() {
       },
       {
         name: "ember-beta",
+        env: {
+          EMBER_OPTIONAL_FEATURES: JSON.stringify({
+            "jquery-integration": false
+          })
+        },
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("beta"),
@@ -70,6 +80,11 @@ module.exports = async function() {
       },
       {
         name: "ember-canary",
+        env: {
+          EMBER_OPTIONAL_FEATURES: JSON.stringify({
+            "jquery-integration": false
+          })
+        },
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("canary"),
