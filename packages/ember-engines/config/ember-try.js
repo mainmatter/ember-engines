@@ -7,42 +7,42 @@ module.exports = async function() {
     useYarn: true,
     scenarios: [
       {
-        name: 'ember-lts-3.12',
+        name: "ember-lts-3.12",
         npm: {
           devDependencies: {
-            'ember-source': '~3.12.0'
+            "ember-source": "~3.12.0"
           }
         }
       },
       {
-        name: 'ember-lts-3.16',
+        name: "ember-lts-3.16",
         npm: {
           devDependencies: {
-            'ember-source': '~3.16.0'
+            "ember-source": "~3.16.0"
           }
         }
       },
       {
-        name: 'ember-lts-3.20',
+        name: "ember-lts-3.20",
         npm: {
           devDependencies: {
-            'ember-source': '~3.20.0'
+            "ember-source": "~3.20.0"
           }
         }
       },
       {
-        name: 'ember-lts-3.24',
+        name: "ember-lts-3.24",
         npm: {
           devDependencies: {
-            'ember-source': '~3.24.0'
+            "ember-source": "~3.24.0"
           }
         }
       },
       {
-        name: 'ember-lts-3.28',
+        name: "ember-lts-3.28",
         npm: {
           devDependencies: {
-            'ember-source': '~3.28.0'
+            "ember-source": "~3.28.0"
           }
         }
       },
@@ -50,7 +50,9 @@ module.exports = async function() {
         name: "ember-release",
         npm: {
           devDependencies: {
-            "ember-source": await getChannelURL("release")
+            "ember-source": await getChannelURL("release"),
+            "ember-auto-import": "^2.2.3",
+             webpack: "^5.0.0"
           }
         }
       },
@@ -58,7 +60,9 @@ module.exports = async function() {
         name: "ember-beta",
         npm: {
           devDependencies: {
-            "ember-source": await getChannelURL("beta")
+            "ember-source": await getChannelURL("beta"),
+            "ember-auto-import": "^2.2.3",
+             webpack: "^5.0.0",
           }
         }
       },
@@ -66,12 +70,14 @@ module.exports = async function() {
         name: "ember-canary",
         npm: {
           devDependencies: {
-            "ember-source": await getChannelURL("canary")
+            "ember-source": await getChannelURL("canary"),
+            "ember-auto-import": "^2.2.3",
+             webpack: "^5.0.0",
           }
         }
       },
       // The default `.travis.yml` runs this scenario via `npm test`,
-      // not via `ember try`. It's still included here so that running
+      // not via `ember try`. It"s still included here so that running
       // `ember try:each` manually or from a customized CI config will run it
       // along with all the other scenarios.
       {
@@ -94,17 +100,17 @@ module.exports = async function() {
         }
       },
       {
-        name: 'ember-classic',
+        name: "ember-classic",
         env: {
           EMBER_OPTIONAL_FEATURES: JSON.stringify({
-            'application-template-wrapper': true,
-            'default-async-observers': false,
-            'template-only-glimmer-components': false
+            "application-template-wrapper": true,
+            "default-async-observers": false,
+            "template-only-glimmer-components": false
           })
         },
         npm: {
           ember: {
-            edition: 'classic'
+            edition: "classic"
           }
         }
       }
