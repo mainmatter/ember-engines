@@ -42,7 +42,8 @@ module.exports = async function() {
         name: "ember-lts-3.28",
         npm: {
           devDependencies: {
-            "ember-source": "~3.28.0"
+            "ember-source": "~3.28.0",
+            "ember-cli": "~3.28.0"
           }
         }
       },
@@ -56,6 +57,7 @@ module.exports = async function() {
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("release"),
+            "ember-cli": "~3.28.0",
             "ember-auto-import": "^2.2.3",
              webpack: "^5.0.0",
              "ember-cli-app-version": "~5.0.0"
@@ -72,6 +74,7 @@ module.exports = async function() {
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("beta"),
+            "ember-cli": "~3.28.0",
             "ember-auto-import": "^2.2.3",
             webpack: "^5.0.0",
             "ember-cli-app-version": "~5.0.0"
@@ -88,6 +91,7 @@ module.exports = async function() {
         npm: {
           devDependencies: {
             "ember-source": await getChannelURL("canary"),
+            "ember-cli": "~3.28.0",
             "ember-auto-import": "^2.2.3",
             webpack: "^5.0.0",
             "ember-cli-app-version": "~5.0.0"
